@@ -1,86 +1,93 @@
+/* NA TAG BODY ESTAMOS CRIANDO O GRID TEMPLATE  */
 body{
     margin: 0;
     display: grid;
     grid-template-areas: 'navbar navbar navbar navbar'
                          'section section aside aside'
                          'footer footer footer footer';
-    grid-template-rows: 20vh 60vh 30vh;
+    grid-template-rows: 10vh 60vh 30vh;
 }
-/* estilo da nav em breakpoint */
+  
+  /* ESTILO DA NAV COM BREAKPOINT EM 768 E 425 */
 nav{
     grid-area: navbar;
-    height: 60px;
-    background-color: rgb(127, 132, 175);
+    background-color: rgb(117, 128, 79);
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-nav a{
-    text-decoration: none;
-    color: aquamarine;
+    font-family: 'Quicksand', sans-serif;
 
 }
-#menuHamburger{
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 16pt;
+}
+  /* ESTRUTURA MENU HAMBURGUER */
+#menuHamburguer{
     display: none;
     flex-direction: column;
     justify-content: space-around;
     height: 25px;
     width: 30px;
-
 }
+  
 .trace{
     width: 100%;
     height: 3px;
-    background-color: aquamarine;
+    background-color: white;
     border-radius: 40px;
 }
- /* TABLET */
-@media (max-width: 768px){
-    nav{
-        background-color: rgb(8, 6, 2);
+  
+/* TABLET */
+  
+@media (max-width:768px){
+    nav a{
+      display: none;
     }
-}
-@media (max-width: 768px){
-    nav a {
-        display: none;
-    }
-    #menuHamburger{
-        display: flex;
-    }
+#menuHamburguer{
+      display: flex;
 }
 body{
     grid-template-areas: 'navbar navbar navbar aside'
-                        'section section section aside'
-                        'aside aside aside aside'
-                        'footer footer footer aside';
-    grid-template-rows: 20vh 60vh 60vh 30vh;
-
+                           'section section section aside'
+                           'footer footer footer aside';
+    grid-template-rows: 15vh 60vh 30vh;    
+    } 
 }
- /* CELULAR */
-@media (max-width: 425px){
+/* CELULAR */
+@media (max-width:425px){
     nav{
-        justify-content: flex-end;
+      justify-content: flex-start;
     }
-    #menuHamburger{
-        margin-left: 10px;
-    }
+#menuHamburguer{
+      margin-left: 10px;
 }
 body{
-        grid-template-areas: 'navbar navbar navbar navbar'
-                            'section section section section'
-                            'aside aside aside aside'
-                            'footer footer footer footer';
-        grid-template-rows: 20vh 60vh 60vh 30vh;
+    grid-template-areas: 'navbar navbar navbar navbar'
+                           'section section section section'
+                           'aside aside aside aside'
+                           'footer footer footer footer';
+    grid-template-rows: 15vh 60vh 60vh 30vh;
+    }
 }
+  
 section{
     grid-area: section;
-    background-color: chartreuse;
+    background-color:;
+}
+section img{
+    border-radius: 100%;
 }
 aside{
     grid-area: aside;
-    background-color: yellow;
+    background-color: rgb(21, 172, 147);
 }
 footer{
     grid-area: footer;
-    background-color: aqua;
+    background-color: rgb(95, 82, 9);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
