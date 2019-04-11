@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-areas: 'navbar navbar navbar navbar'
+                         'section section aside aside'
+                         'footer footer footer footer';
+    grid-template-rows: 20vh 60vh 30vh;
+}
+/* estilo da nav em breakpoint */
+nav{
+    grid-area: navbar;
+    height: 60px;
+    background-color: rgb(127, 132, 175);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a{
+    text-decoration: none;
+    color: aquamarine;
+
+}
+#menuHamburger{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25px;
+    width: 30px;
+
+}
+.trace{
+    width: 100%;
+    height: 3px;
+    background-color: aquamarine;
+    border-radius: 40px;
+}
+ /* TABLET */
+@media (max-width: 768px){
+    nav{
+        background-color: rgb(8, 6, 2);
+    }
+}
+@media (max-width: 768px){
+    nav a {
+        display: none;
+    }
+    #menuHamburger{
+        display: flex;
+    }
+}
+body{
+    grid-template-areas: 'navbar navbar navbar aside'
+                        'section section section aside'
+                        'aside aside aside aside'
+                        'footer footer footer aside';
+    grid-template-rows: 20vh 60vh 60vh 30vh;
+
+}
+ /* CELULAR */
+@media (max-width: 425px){
+    nav{
+        justify-content: flex-end;
+    }
+    #menuHamburger{
+        margin-left: 10px;
+    }
+}
+body{
+        grid-template-areas: 'navbar navbar navbar navbar'
+                            'section section section section'
+                            'aside aside aside aside'
+                            'footer footer footer footer';
+        grid-template-rows: 20vh 60vh 60vh 30vh;
+}
+section{
+    grid-area: section;
+    background-color: chartreuse;
+}
+aside{
+    grid-area: aside;
+    background-color: yellow;
+}
+footer{
+    grid-area: footer;
+    background-color: aqua;
+}
